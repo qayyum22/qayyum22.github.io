@@ -1,44 +1,373 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Qayyum Siddiqui</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="hero">
-      <h3>Coming Soon!</h3>
-      <h1>
-        Technology Trends(A.I) , Growth Ideas , Investing , resources and more.
-      </h1>
-      <p>Subscribe for more details</p>
-      <form name="submit-to-google-sheet">
-        <input type="email" name="Email" placeholder="Your email id" required />
-        <button type="submit"><img src="send-icon.png" width="30px" /></button>
-      </form>
-      <span id="msg"></span>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- 
+    - primary meta tags
+  -->
+  <title>Qayyum - Perosonal Blog Website</title>
+  <meta name="title" content="Qayyum - Perosonal Blog Website">
+  <meta name="description" content="This is a personal blog made by Qayyum Siddiqui">
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="./assets/images/hero-banner.png">
+  <link rel="preload" as="image" href="./assets/images/pattern-2.svg">
+  <link rel="preload" as="image" href="./assets/images/pattern-3.svg">
+
+</head>
+
+<body id="top">
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <a href="#" class="logo">
+
+        <h1>Qayyum Siddiqui</h1>
+      </a>
+
+      <nav class="navbar" data-navbar>
+
+        <div class="navbar-top">
+          <a href="#" class="logo">
+
+            <h1>Qayyum Siddiqui</h1>
+          </a>
+
+          <button class="nav-close-btn" aria-label="close menu" data-nav-toggler>
+            <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="navbar-list">
+
+          <li>
+            <a href="#home" class="navbar-link hover-1" data-nav-toggler>Home</a>
+          </li>
+
+          <li>
+            <a href="#topics" class="navbar-link hover-1" data-nav-toggler>Topics</a>
+          </li>
+
+          <li>
+            <a href="#featured" class="navbar-link hover-1" data-nav-toggler>Featured Post</a>
+          </li>
+
+          <li>
+            <a href="#recent" class="navbar-link hover-1" data-nav-toggler>Recent Post</a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-link hover-1" data-nav-toggler>Shop</a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-link hover-1" data-nav-toggler>Jobs</a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-link hover-1" data-nav-toggler>Contact</a>
+          </li>
+
+        </ul>
+
+
+
+        <p class="copyright-text">
+          Copyright 2023 © Qayyum - Personal Blog.
+          Developed by Qayyum Siddiqui
+        </p>
+
+      </nav>
+
+      <a href="#" class="btn btn-primary">Subscribe</a>
+
+      <button class="nav-open-btn" aria-label="open menu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true"></ion-icon>
+      </button>
+
     </div>
+  </header>
 
-    <script>
-      const scriptURL =
-        "https://script.google.com/macros/s/AKfycbxM6JVPurZaucV-a-cINbO80DmdBhjhkV_U3UHwUnuZd05WlTX7ojA9RwllaHxq1q7S/exec";
-      const form = document.forms["submit-to-google-sheet"];
-      const msg = document.getElementById("msg");
 
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        fetch(scriptURL, { method: "POST", body: new FormData(form) })
-          .then((response) => {
-            msg.innerHTML = "Thank you for subscribing!";
-            setTimeout(function () {
-              msg.innerHTML = " ";
-            }, 5000);
-            form.reset();
-          })
-          .catch((error) => console.error("Error!", error.message));
-      });
-    </script>
-  </body>
+
+
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="hero" id="home" aria-label="home">
+        <div class="container">
+
+          <div class="hero-content">
+
+            <p class="hero-subtitle">Hello Everyone!</p>
+
+            <h1 class="headline headline-1 section-title">
+              I’m <span class="span">Qayyum Siddiqui</span>
+            </h1>
+
+            <p class="hero-text">
+              I write about everything i find interesting and useful.
+            </p>
+
+           
+          <div class="input-wrapper">
+          <form name="submit-to-google-sheet">
+            <input type="email" class="input-field" name="Email" placeholder="Your email id" required />
+            <button type="submit"><img src="./assets/images/send-icon.png" width="30px" /></button>
+          </form>
+          
+        </div>
+        <span id="msg"></span>
+        </div>
+    
+        <script>
+          const scriptURL =
+            "https://script.google.com/macros/s/AKfycbxM6JVPurZaucV-a-cINbO80DmdBhjhkV_U3UHwUnuZd05WlTX7ojA9RwllaHxq1q7S/exec";
+          const form = document.forms["submit-to-google-sheet"];
+          const msg = document.getElementById("msg");
+    
+          form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            fetch(scriptURL, { method: "POST", body: new FormData(form) })
+              .then((response) => {
+                msg.innerHTML = "Thank you for subscribing!";
+                setTimeout(function () {
+                  msg.innerHTML = " ";
+                }, 5000);
+                form.reset();
+              })
+              .catch((error) => console.error("Error!", error.message));
+          });
+        </script>  
+
+
+          <div class="hero-banner">
+
+            <img src="./assets/images/hero-banner.png" width="600" height="800" alt="Qayyum Siddiqui" class="w-100">
+  
+            <img src="./assets/images/pattern-2.svg" width="27" height="26" alt="shape" class="shape shape-1">
+  
+            <img src="./assets/images/pattern-3.svg" width="27" height="26" alt="shape" class="shape shape-2">
+  
+          </div>
+  
+          <img src="./assets/images/shadow-1.svg" width="500" height="800" alt="" class="hero-bg hero-bg-1">
+  
+          <img src="./assets/images/shadow-2.svg" width="500" height="500" alt="" class="hero-bg hero-bg-2">
+  
+          </div>
+        </div>
+
+        
+      </section>
+    </article>
+  </main>
+
+
+
+
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer>
+    <div class="container">
+
+      <div class="card footer">
+
+        <div class="section footer-top">
+
+          <div class="footer-brand">
+
+            <a href="#" class="logo">
+              <h1>Qayyum Siddiqui</h1>
+            </a>
+
+            <p class="footer-text">
+              I blog about varying subjects like AI/ML, Blockchain & Decentralisation, self finance & Many more.
+            </p>
+
+            <p class="footer-list-title">Address</p>
+
+            <address class="footer-text address">
+              Prince Colony, Bahadurpura, <br>
+              Hyderabad-500064, India.
+            </address>
+
+          </div>
+
+          <div class="footer-list">
+
+            <p class="footer-list-title">Categories</p>
+
+            <ul>
+
+              <li>
+                <a href="#" class="footer-link hover-2">Technology</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link hover-2">Business</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link hover-2">Investing</a>
+              </li>
+
+              <li>
+                <a href="#" class="footer-link hover-2">News</a>
+              </li>
+
+
+
+            </ul>
+
+          </div>
+
+          <div class="footer-list">
+
+            <p class="footer-list-title">Newsletter</p>
+
+            <p class="footer-text">
+              Sign up to be first to receive the latest stories inspiring us, case studies, and industry news.
+            </p>
+
+            <div class="input-wrapper">
+              <input type="text" name="name" placeholder="Your name" required class="input-field" autocomplete="off">
+
+              <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+            </div>
+
+            <div class="input-wrapper">
+              <input type="email" name="email_address" placeholder="Emaill address" required class="input-field"
+                autocomplete="off">
+
+              <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+            </div>
+
+            <a href="#" class="btn btn-primary">
+              <span class="span">Subscribe</span>
+
+              <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+            </a>
+
+          </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+          <p class="copyright">
+            &copy; Developed by <a href="https://qayyumsiddiqui.com/portfolio/" target="_blank"
+              class="copyright-link">Qayyum Siddiqui.</a>
+          </p>
+
+          <ul class="social-list">
+
+            <li>
+              <a href="https://twitter.com/qayyumabdul660" target="_blank" class="social-link">
+                <ion-icon name="logo-twitter"></ion-icon>
+
+                <span class="span">Twitter</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://www.linkedin.com/in/mohammed-abdul-qayyum-siddiqui-670a88a4/" target="_blank"
+                class="social-link">
+                <ion-icon name="logo-linkedin"></ion-icon>
+
+                <span class="span">LinkedIn</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://www.instagram.com/qayyumsiddiqui22/" target="_blank" class="social-link">
+                <ion-icon name="logo-instagram"></ion-icon>
+
+                <span class="span">Instagram</span>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://www.youtube.com/@qayyumsiddiqui22/" target="_blank" class="social-link">
+                <ion-icon name="logo-youtube"></ion-icon>
+
+                <span class="span">Youtube</span>
+              </a>
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+  </footer>
+
+
+
+
+
+  <!-- 
+    - #BACK TO TOP
+  -->
+
+  <a href="#top" class="back-top-btn" aria-label="back to top" data-back-top-btn>
+    <ion-icon name="arrow-up-outline" aria-hidden="true"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  
+</body>
+
 </html>
